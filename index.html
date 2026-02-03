@@ -2,60 +2,121 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fortnite Mobile</title>
+  <title>Fortnite Mobile – iOS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Play Fortnite on your phone now">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #fff;
+      background: linear-gradient(180deg, #0b1020, #05080f);
+      color: #ffffff;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-    .box {
-      background: #111827;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 360px;
+
+    .card {
       width: 90%;
-      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      max-width: 420px;
+      background: #0f172a;
+      border-radius: 16px;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0,0,0,0.6);
     }
+
     h1 {
-      font-size: 22px;
+      font-size: 24px;
       margin-bottom: 10px;
     }
-    p {
-      font-size: 15px;
+
+    .emoji {
+      font-size: 28px;
+    }
+
+    .sub {
+      font-size: 14px;
       color: #cbd5f5;
       margin-bottom: 20px;
     }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 25px;
+      font-size: 12px;
+    }
+
+    .badge {
+      background: #1e293b;
+      padding: 6px 10px;
+      border-radius: 8px;
+    }
+
     .btn {
-      display: block;
       background: #22c55e;
       color: #000;
-      padding: 14px;
-      border-radius: 8px;
-      text-decoration: none;
+      padding: 15px;
+      border-radius: 12px;
+      font-size: 18px;
       font-weight: bold;
-      font-size: 16px;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 12px;
     }
+
     .note {
-      margin-top: 12px;
       font-size: 12px;
       color: #94a3b8;
     }
+
+    /* Content Locker placeholder */
+    #locker {
+      margin-top: 25px;
+      display: none;
+    }
   </style>
 </head>
+
 <body>
-  <div class="box">
-    <h1>Fortnite on Mobile 📱</h1>
-    <p>This is how people think it's on the App Store</p>
-    <a href="#" class="btn">Continue</a> 
+
+  <div class="card">
+    <div class="emoji">🎮📱</div>
+
+    <h1>Fortnite on iOS</h1>
+
+    <div class="sub">
+      Not available on the App Store<br>
+      Limited access for mobile users
+    </div>
+
+    <div class="badges">
+      <div class="badge">🔒 iOS Only</div>
+      <div class="badge">⏱ 30 Seconds</div>
+      <div class="badge">✅ Safe</div>
+    </div>
+
+    <a href="#" class="btn" onclick="openLocker()">
+      Continue
+    </a>
+
+    <div class="note">
+      Verification required to continue
+    </div>
+
+    <!-- Content Locker will be injected here -->
+    <div id="locker"></div>
   </div>
+
+  <script>
+    function openLocker() {
+      document.getElementById("locker").style.display = "block";
+      // OGAds / CPA code will be placed here later
+    }
+  </script>
+
 </body>
 </html>
