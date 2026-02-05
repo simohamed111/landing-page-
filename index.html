@@ -48,6 +48,7 @@
       gap: 10px;
       margin-bottom: 25px;
       font-size: 12px;
+      flex-wrap: wrap;
     }
 
     .badge {
@@ -66,17 +67,17 @@
       text-decoration: none;
       display: block;
       margin-bottom: 12px;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 0 rgba(0,0,0,0);
     }
 
     .note {
       font-size: 12px;
       color: #94a3b8;
-    }
-
-    /* Content Locker placeholder */
-    #locker {
-      margin-top: 25px;
-      display: none;
     }
   </style>
 </head>
@@ -99,24 +100,16 @@
       <div class="badge">✅ Safe</div>
     </div>
 
-    <a href="#" class="btn" onclick="openLocker()">
+    <!-- 🔥 CTA BUTTON -->
+    <a href="https://lockedapp.space/cl/i/m5eo14" class="btn">
       Continue
     </a>
 
     <div class="note">
       Verification required to continue
     </div>
-
-    <!-- Content Locker will be injected here -->
-    <div id="locker"></div>
   </div>
-
-  <script>
-    function openLocker() {
-      document.getElementById("locker").style.display = "block";
-      // OGAds / CPA code will be placed here later
-    }
-  </script>
 
 </body>
 </html>
+
